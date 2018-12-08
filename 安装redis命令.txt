@@ -1,0 +1,7 @@
+redis-server --service-install redis.windows.conf --loglevel notice --service-name Redis 
+
+redis-server --service-start 
+
+redis-server --service-stop 
+
+redis-server --service-uninstall  
