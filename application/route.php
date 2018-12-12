@@ -35,7 +35,7 @@ Route::any('successAlipay$','index/Test1/alipay');//支付宝回调地址
 Route::any('returnAlipay$','index/Test1/returnUrl');//支付宝回调地址
 
 Route::any('apitest$','api/apiTest/weixin');//发送模板消息api
-Route::any('weixinapitest$','api/Test/weixin');//微信小程序api——test
+Route::any('axiostest$','api/Test/apiTest');//微信小程序api——test
 
 //--------start-----------
 //--------------微信公众号配置------------

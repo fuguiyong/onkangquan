@@ -10,20 +10,23 @@ class Order extends Base
     //挂号首页
     public function ordered()
     {
-        //获取信息自动登录
-        $url = 'http://www.kangquanpay.top/ordered';
-        $this->login($url);
-
-        //判断用户是否注册了，否则先请用户注册
-        $openid = Session::get('user.openid');
-        $user = UserInfo::get(['openid' => $openid]);
-        if ($user == null) {
-            return view('index/noBind');
-        } else {
-            //取得所有医生信息
-            $allDocter = Docter::all();
-            return view('orderIndex', ['allDocter' => $allDocter]);//全部科室
-        }
+        //取得所有医生信息
+        $allDocter = Docter::all();
+        return view('orderIndex', ['allDocter' => $allDocter]);//全部科室
+//        //获取信息自动登录
+//        $url = 'http://www.kangquanpay.top/ordered';
+//        $this->login($url);
+//
+//        //判断用户是否注册了，否则先请用户注册
+//        $openid = Session::get('user.openid');
+//        $user = UserInfo::get(['openid' => $openid]);
+//        if ($user == null) {
+//            return view('index/noBind');
+//        } else {
+//            //取得所有医生信息
+//            $allDocter = Docter::all();
+//            return view('orderIndex', ['allDocter' => $allDocter]);//全部科室
+//        }
 
     }
 

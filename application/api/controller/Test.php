@@ -8,13 +8,17 @@
 
 namespace app\api\controller;
 
+use think\Controller;
+use think\Request;
 
-class Test
+class Test extends Controller
 {
-    public function weixin()
+    protected $request;
+    public function apiTest()
     {
+        $this->request = Request::instance();
         $data = [
-            'weixin'=>'xiaochengxv'
+            'url'=>$this->request->url(true)
         ];
 
         return json($data);

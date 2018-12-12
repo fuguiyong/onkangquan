@@ -4,6 +4,7 @@ namespace app\index\controller;
 
 use aliyunSms\SendMsg;//阿里云
 use think\Cache;
+
 // use smsDemo\smsyzm;//云之讯
 
 class Register extends Base
@@ -12,8 +13,8 @@ class Register extends Base
     public function register()
     {
         //用户自动登录
-        $url = 'http://www.kangquanpay.top/register';
-        $this->login($url);
+//        $url = 'http://www.kangquanpay.top/register';
+//        $this->login($url);
         //返回页面
         return view('register');
     }
